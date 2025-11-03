@@ -42,11 +42,11 @@ class Model(nn.Module):
         x = F.softmax(self.l5(x))
         return x
 
-def train(model, train_ds):
+def train(model, train_loader):
     pass
 
 
-def evaluate(model, test_ds):
+def evaluate(model, test_loader):
     pass
 
 if __name__ == "__main__":
@@ -58,8 +58,8 @@ if __name__ == "__main__":
     train_loader = DataLoader(train_ds, batch_size=16, shuffle=True)
     test_loader = DataLoader(test_ds, batch_size=16, shuffle=False)
     model = Model()
-    train(model, train_ds)
-    evaluate(model, test_ds)
+    train(model, train_loader)
+    evaluate(model, test_loader)
 
 
 
